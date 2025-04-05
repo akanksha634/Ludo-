@@ -1,0 +1,130 @@
+:root {
+  --player-red: #e74c3c;
+  --player-green: #2ecc71;
+  --player-yellow: #f1c40f;
+  --player-blue: #3498db;
+  --safe-zone: #f9e79f;
+  --home-base: #d5f5e3;
+  --path-color: #f5f5f5;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-container {
+  background-color: #2c3e50;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.player-info {
+  background-color: #34495e;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  gap: 2px;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #333;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  background-color: var(--path-color);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell.safe {
+  background-color: var(--safe-zone);
+}
+
+.cell.home {
+  background-color: var(--home-base);
+}
+
+.piece {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.piece.red {
+  background-color: var(--player-red);
+}
+
+.piece.green {
+  background-color: var(--player-green);
+}
+
+.piece.yellow {
+  background-color: var(--player-yellow);
+}
+
+.piece.blue {
+  background-color: var(--player-blue);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#diceResult {
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 60px;
+}
